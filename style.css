@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #9bb5c6;
+}
+/* header */
+#logo{
+ 
+
+    font-size: 100px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    color: white;
+   font-size: 100px;
+   font-family: 'Righteous', cursive;
+}
+#logo-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#vintage{
+    transform: translateY(-20px);
+    font-family: 'Belleza', sans-serif;
+    letter-spacing: 15px;
+    font-size: 40px;
+    color: #c5ddda;
+}
