@@ -3,29 +3,31 @@
     margin: 0;
 }
 body{
-    background-color: #9bb5c6;
+}
+.wrapper{
+    height: 200vh;
 }
 /* header */
 #logo{
     font-size: 100px;
 }
 header{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    height: 100px;
 }
-
 header h1{
     color: white;
    font-size: 100px;
    font-family: 'Belleza', sans-serif;
 }
 #logo-div{
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 20px;
+    position: absolute;
 }
 #vintage{
     transform: translateY(-20px);
@@ -34,14 +36,102 @@ header h1{
     font-size: 40px;
     color: #c5ddda;
 }
+/* nav bar */
+#nav-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: fit-content;
+    position: fixed;
+    top: 30px;
+}
+@keyframes leftNavAnimation {
+    0%{
+       transform: translateX(-40vw);
+       /* opacity: 0; */
+    }
+    100%{
+        transform: translateX(0);
+        /* opacity: 1; */
+    }
+}
+@keyframes rightNavAnimation {
+    0%{
+       transform: translateX(40vw);
+       /* opacity: 0; */
+    }
+    100%{
+        transform: translateX(0);
+        /* opacity: 1; */
+    }
+}
+
+
+
 .nav-items{
-    color: white;
+    color: #609db9;
     text-decoration: none;
     font-family: 'Belleza', sans-serif;
     letter-spacing: 12px;
-    padding: 0 25px 0 25px;
-    border-right: 1.5px solid white;
+    padding: 0 35px 0 35px;
+    border-right: 1.5px solid #609db9;
+    top: 0;
+    background-color: white;
+    transition-delay: 2s;
+}
+#home{
+    z-index: 3;
+    box-sizing: border-box;
+    transition-delay: 200ms;
+    animation: leftNavAnimation forwards 1.4s;
+
+}
+#hand-picked{
+    z-index: 2;
+    
+    animation: leftNavAnimation forwards 1.8s;
 }
 #sale{
-    border:none;
+    box-sizing: border-box;
+    z-index: 1;
+    animation: leftNavAnimation forwards 2s;
+}
+#new-arrivals{
+    box-sizing: border-box;
+    border: none;
+    border-left: 1.5px solid #609db9;
+    
+    z-index: 3;
+    transition-delay: 200ms;
+    animation: rightNavAnimation forwards 1.4s;
+}
+#women{
+    border: none;
+    box-sizing: border-box;
+    border-left: 1.5px solid #609db9;
+    z-index: 2;
+    
+    animation: rightNavAnimation forwards 1.8s;
+
+}
+#men{
+    border-left: 1.5px solid #609db9;
+    border: none;
+     z-index: 1;
+    box-sizing: border-box;
+    
+    animation: rightNavAnimation forwards 2s;
+}
+
+
+/* intro page */
+
+#intro-section{
+    height: 100vh;
+    width: 100vw;
+}
+#intro-section h1{
+
+    width: 40%;
+    text-align: center;
 }
