@@ -12,10 +12,13 @@ body{
     font-size: 100px;
 }
 header{
+    position: fixed;
+    width: 100vw;
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    height: 100px;
+    height:50px;
+    background-color: #063970;
 }
 header h1{
     color: white;
@@ -140,7 +143,7 @@ header h1{
     height: 80%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows:repeat(1,1fr);
+    grid-template-rows:repeat(2,1fr);
 }
 #intro-section h1{
     grid-column: 3/4;
@@ -156,18 +159,17 @@ header h1{
     height: fit-content;
 }
 #intro-outfit1{
-    grid-row: 1/4;
     width: 400px;
-    transform: translateZ(-100px);
-    z-index: 2;
-   
+    position: absolute;
+    /* z-index: 2; */
 }
-#intro-pants{
-    grid-row: 2/3;
-    grid-column: 2/3;
-    width: 1200px;
-    padding: auto;
-
+#intro-outfit1glow{
+    width: 400px;
+    opacity: 0;
+    transition: 400ms;
+}
+#intro-outfit1glow:hover{
+    opacity: 1;
 }
 #intro-sweaters{
     z-index: 2;
@@ -177,10 +179,15 @@ header h1{
     justify-content: space-around;
 }
 #new-arrivals-more{
-   color: #063970;
+    color: black;
     font-size: 60px;
     text-decoration: none;
     padding-bottom: 50px;
+    font-family: 'Belleza', sans-serif;
+}
+#dotted-sweater{
+    font-size: 40px;
+
 }
 /* pants section */
 #pants-section{
@@ -205,11 +212,20 @@ header h1{
     background-color: white;
     position: relative;
     top: 350px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+#pants-shop div{
+    width: 150px;
+    height: 300px;
+    background-color: #063970;
 }
 #pants-title{
+    outline: #063970;
     position: absolute;
-    transform: translateX(-300px);
-    font-size: 200px;
-    color: white;
+    transform: translate(-230px,120px);
+    font-size: 250px;
+    color: rgb(255, 97, 97);
     font-family: 'Belleza', sans-serif;
 }
